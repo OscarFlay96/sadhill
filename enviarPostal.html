@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sad Hill</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css"
+		integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg=="
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+		<button class="menu-icon" type="button" data-toggle="responsive-menu">''</button>
+		<div class="title-bar-title">Sad Hill</div>
+	</div>
+
+	<div class="top-bar" id="responsive-menu">
+		<div class="top-bar-left">
+			<ul class="dropdown menu" data-dropdown-menu>
+				<li class="menu-text">Sad Hill</li>
+				<li><a href="./index.html">Inicio</a></li>
+				<li><a href="./historia.html">Historia</a></li>
+				<li><a href="./desenterrandoSadHill.html">Desenterrando Sad Hill</a></li>
+				<li><a href="./enviarPostal.html">Enviar Postal</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="grid-container">
+		<div class="grid-x grid-margin-y">
+			<div class="cell">
+				<h1 class="text-center">Envía tu postal de Sad Hill</h1>
+			</div>
+		</div>
+
+		<div class="grid-x grid-margin-x">
+			<div class="cell medium-6">
+				<img src="./assets/img/Sad-Hill_4.jpg" alt="Postal de Sad Hill">
+			</div>
+			<div class="cell medium-6">
+				<form data-abide novalidate id="formEnviarPostal">
+					<div data-abide-error class="alert callout" style="display: none;">
+						<p><i class="fi-alert"></i> Hay errores en el formulario.</p>
+					</div>
+					<div class="grid-container">
+						<div class="grid-x grid-margin-x">
+							<div class="cell small-12">
+								<label>Email
+									<input type="text" id="email" placeholder="destinatario@email.com" aria-describedby="emailDescribed"
+										aria-errormessage="emailError" required pattern="email">
+									<span class="form-error" id="emailError">
+										Es requerido un email correcto.
+									</span>
+								</label>
+								<p class="help-text" id="emailDescribed">Correo donde enviaremos la postal!</p>
+							</div>
+							<div class="cell small-12">
+								<label>Mensaje
+									<textarea id="mensaje" placeholder="Mensaje a enviar"
+									aria-describedby="mensajeDescribeb" aria-errormessage="mensajeError" required></textarea>
+									<span class="form-error" id="mensajeError">
+										El mensaje es requerido
+									</span>
+								</label>
+								<p class="help-text" id="mensajeDescribeb">Mensaje que irá junto al envío de la postal.</p>
+							</div>
+							</div>
+						</div>
+						<div class="grid-x grid-margin-x">
+							<fieldset class="cell large-6">
+								<button class="button" type="submit" id="btnEnviarPostal" value="Enviar">Enviar</button>
+							</fieldset>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<br><br>
+
+	<footer class="grid-container full">
+		<div class="footer-bottom">
+			<div class="grid-x grid-padding-x align-middle">
+				<div class="cell shrink">
+					<span>&copy; 2019</span>
+				</div>
+				<div class="cell auto">
+					<ul class="menu align-right">
+						<li><a href="#">Inicio</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js"
+		integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw=="
+		crossorigin="anonymous"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="./assets/js/sendPostal.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+</body>
+
+</html>
